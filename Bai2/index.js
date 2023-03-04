@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const authR = require("./routes/auth")
 const userR = require("./routes/user")
-
+const inventoryR = require("./routes/Inventory")
 dotenv.config()
 const app = express()
 
@@ -19,6 +19,7 @@ app.use(express.json())
 
 //Routes
 app.use("/auth",authR)
+app.use("/inventory",inventoryR)
 
 app.use("/user",userR)
 

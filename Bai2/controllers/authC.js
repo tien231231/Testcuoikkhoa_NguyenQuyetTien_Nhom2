@@ -14,7 +14,7 @@ const authC = {
             // tạo new user
             const newUser = await new User({
                 username:req.body.username,
-                email:req.body.email,
+                
                 password:hashed,
             })
 
