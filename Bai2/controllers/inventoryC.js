@@ -11,7 +11,7 @@ const inventoryC = {
     },
     get : async(req,res)=>{
         try{
-            const donee = await inventory.find({ instock: { $ne: 120 } })
+            const donee = await inventory.find({ instock: { $lt: 100 } })
             res.status(200).json(donee)
         }catch(err){
             res.status(500).json(err)
